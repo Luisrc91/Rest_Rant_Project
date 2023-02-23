@@ -6,7 +6,7 @@ const places = require("../models/places")
 // })
 // GET /places
 router.get('/', (req, res) => {
-  let places = []
+ 
   res.render('places/index', {places})
 
 })
