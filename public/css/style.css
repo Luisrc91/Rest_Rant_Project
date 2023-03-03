@@ -39,3 +39,14 @@ nav a:hover {
 }
 
 
+/* personalize  */
+
+.homeImg{
+  width: 500px;
+}
+
+.indexImg{
+  /* flex-direction: column; */
+  width: 600px;
+
+}
