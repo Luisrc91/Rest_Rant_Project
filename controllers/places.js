@@ -4,6 +4,7 @@ const db = require('../models')
 router.get('/', (req, res) => {
     db.Place.find()
     .then((places) => {
+      console.log(places)
       res.render('places/index', { places })
     })
     .catch(err => {
