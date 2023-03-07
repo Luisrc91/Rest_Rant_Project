@@ -46,7 +46,12 @@ nav a:hover {
 }
 
 .indexImg{
+  /* display: flex; */
   /* flex-direction: column; */
-  width: 600px;
+  width: 300px;  
 
+}
+
+.showImg{
+  width: 300px;
 }
