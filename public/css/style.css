@@ -42,16 +42,22 @@ nav a:hover {
 /* personalize  */
 
 .homeImg{
-  width: 500px;
+  width: 700px;
 }
 
 .indexImg{
   /* display: flex; */
   /* flex-direction: column; */
-  width: 300px;  
+  width: 250px;  
 
 }
 
 .showImg{
-  width: 300px;
+  width: 250px;
+}
+
+.controlBox {
+  display: flex;
+  justify-content: center;
+ 
 }
