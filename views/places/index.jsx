@@ -6,7 +6,7 @@ function index ({places}) {
     return (
       <div className="col-sm-6 col-md-3 col-lg-3">
         <h2>
-          <a href={`/places/${place.id}`} >
+          <a href={`/places/${place._id}`} >
             {place.name}
           </a>
         </h2>

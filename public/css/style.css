@@ -1,6 +1,9 @@
+
 body {
+
   background-color: lightblue;
   text-align: center;
+ 
 }
 
 main {
@@ -41,14 +44,20 @@ nav a:hover {
 
 /* personalize  */
 
-.homeImg{
-  width: 700px;
+.homeImg{ 
+  /* display: flex; */
+  /* flex-basis: 100px; */
+  min-width: 100px;
+  max-width: 700px;
+  flex-shrink: 2;
+  flex-grow: 0;
 }
 
 .indexImg{
-  /* display: flex; */
+  display: flex;
   /* flex-direction: column; */
   width: 250px;  
+  flex-shrink: 1;
 
 }
 
