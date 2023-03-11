@@ -19,11 +19,11 @@ function show ({place}) {
     let averageRating = Math.round(sumRatings / place.comments.length)
     let stars = ''
     for (let i = 0; i < averageRating; i++) {
-      stars += '⭐'
+      stars += `⭐`
     }
     rating = (
       <h3>
-        {Math.round(averageRating)} stars
+        {stars} stars
       </h3>
     )
   
@@ -35,7 +35,7 @@ function show ({place}) {
     comments = place.comments.map(c => {
       return (
         <div className="border">
-          <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
+          <h2 className="rant">{c.rant ? `Rant! 😡` : `Rave! 😻`}</h2>
           <h4>{c.content}</h4>
           <h3>
             <stong>- {c.author}</stong>
@@ -79,9 +79,11 @@ function show ({place}) {
                 <h2>
                   Comments
                 </h2>
-                {comments}
+                <div className='row'> {comments} </div>
             </div>
-            <a href={`/places/${place.id}/comment`}>Add New Comment</a>
+            <div>
+            <a className='btn btn-primary' href={`/places/${place.id}/comment`}>Add New Comment</a>
+            </div>
           </div>
         </main>
       </Def>

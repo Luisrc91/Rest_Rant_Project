@@ -4,7 +4,7 @@ function Def (html) {
     return (
         <html>
             <head>
-                <title>Title</title>
+                <title>Rest-Rant</title>
                 <link rel="icon" href="/public/css/images/favicon.ico?v=2" type="image/x-icon"/>
 
 {/* /* BOOTSTRAP CDN LINK (long) */ }
