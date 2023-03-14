@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const db = require('../models')
+const comment = require('../models/comment')
 
 router.get('/', (req, res) => {
     db.Place.find()
@@ -110,6 +111,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   db.Place.findByIdAndDelete(req.params.id)
+ 
   .then(place => {
       res.redirect('/places')
   })
@@ -118,6 +120,19 @@ router.delete('/:id', (req, res) => {
       res.render('error404')
   })
 })
+
+router.delete('/:id', (req, res) => {
+  Comment.findByIdAndDelete(req.params.id)
+ 
+  .then(comment => {
+      res.redirect('/places')
+  })
+  .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+  })
+})
+
 
 
 router.get('/:id/edit', (req, res) => {
@@ -139,17 +154,22 @@ router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
 })
 
+
+
 module.exports = router
 
 
 
 
 
+// const apiVersion1 = 'v1'
+// const apiVersion2 = 'v2'
 
 
 
-
-
+// // Controllers & Routes
+// app.use(`/api/${apiVersion1}/places`, require('./controllers/places'))
+// app.use(`/api/${apiVersion2}/places`, require('./controllers/places'))
 
 
 

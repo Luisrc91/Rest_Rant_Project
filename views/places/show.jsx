@@ -1,4 +1,5 @@
 const React = require('react')
+const comment = require('../../models/comment')
 const Def = require('../default')
 
 function show ({place}) {
@@ -71,8 +72,8 @@ function show ({place}) {
                 Serving {place.cuisines}
               </h4>
               <a href={`/places/${place.id}/edit`} className="btn btn-warning">Edit</a>
-              <form method="POST" action={`/places/${place.id}?_method=DELETE`}> 
-                  <button type="submit" className="btn btn-danger">Delete</button>
+              <form method="POST" action={`/places/${place.id}/comment/${comment.id}?_method=DELETE`}>
+                <input type="submit" className="btn btn-danger" value="Delete Comment" />
               </form>
             </div>
             <div className="col-sm-12">
